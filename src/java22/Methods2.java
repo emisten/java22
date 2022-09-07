@@ -31,11 +31,8 @@ public class Methods2 {
     private static void test() {
 
     }
-
     private static void printIfGreaterThanTwo(double value) {
-
     }
-
 
     public static int sum( int a, int b){
         return 0;
