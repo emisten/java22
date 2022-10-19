@@ -11,7 +11,19 @@ public class CarDemo {
 
         System.out.println(i);
 
-        Car myCar = new Car(1700, 185, new Color(200,0,0));
+
+
+
+
+        Car myCar = new Car(1700, new Color(200,0,0),185);
+
+        //copying an object with copy constructor
+        Car newCar = new Car(myCar);
+
+
+        //Without a copy constructor we have to do like this
+        //Will not work if we have private fields without getters
+        Car newBadWayCar = new Car(myCar.getWeight(), myCar.getColor(), myCar.getMaxSpeed());
 
 
 //    myCar.weight = 1700;
@@ -20,8 +32,10 @@ public class CarDemo {
 
         System.out.println(myCar.maxSpeed());
 
-        if (Objects.nonNull(myCar.color))
+
+
+        if (Objects.nonNull(myCar.getColor()))
          //   if (myCar.color != null)
-                System.out.println(myCar.color.getRed());
+                System.out.println(myCar.getColor().getRed());
     }
 }
