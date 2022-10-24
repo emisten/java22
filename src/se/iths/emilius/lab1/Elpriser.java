@@ -22,33 +22,15 @@ public class Elpriser {
 
 
             switch (chooseentry) {
-                case "1":
-                    inputPrices();
-                    break;
-                case "2":
-                    minMaxAverage();
-                    break;
-
-                case "3":
-                    sortPrices();
-                    break;
-
-                case "4":
-                    cheapestHours();
-                    break;
-
-
-                case "5":
-                    visualizePrices();
-                    break;
-
-
-                case "E":
+                case "1" -> inputPrices();
+                case "2" -> minMaxAverage();
+                case "3" -> sortPrices();
+                case "4" -> cheapestHours();
+                case "5" -> visualizePrices();
+                case "E" -> {
                     run = false;
                     System.out.println("Exited the program");
-                    break;
-
-
+                }
             }
 
         }
